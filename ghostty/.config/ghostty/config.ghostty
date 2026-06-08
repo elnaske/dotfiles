@@ -1,0 +1,17 @@
+# background
+background-opacity = 0.85
+background-blur = true
+background = #000000
+
+window-decoration = none
+
+# disable ligatures
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+mouse-hide-while-typing
+
+bell-features = no-audio
+bell-features = no-attention
+bell-features = no-title
