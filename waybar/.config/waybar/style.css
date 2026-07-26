@@ -1,0 +1,144 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+@import "/home/elias/.cache/wal/colors-waybar.css";
+@define-color primary @color4;
+@define-color secondary @color5;
+@define-color text @foreground;
+
+window#waybar {
+    background-color: alpha(@background, 0.85);
+    color: @text;
+    transition: background 0.3s ease;
+    border-radius: 0px;
+}
+
+window#waybar.hidden {
+    opacity: 0.3;
+}
+
+
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 0 4px;
+}
+
+#workspaces,
+#clock,
+#network,
+#pulseaudio,
+#pulseaudio.microphone,
+
+#workspaces button {
+    padding: 0 8px;
+    color: @text;
+    background-color: transparent;
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 0 10px;
+    margin: 4 0px;
+}
+
+#workspaces button.empty {
+    color: @background;
+    opacity: 0.35;
+}
+
+#workspaces button.hidden {
+    color: @text;
+    opacity: 0.35;
+}
+
+#workspaces button:hover {
+    color: @background;
+    opacity: 0.35;
+}
+
+#workspaces button.active {
+    color: @background;
+    background: linear-gradient(to right,@primary, @secondary);
+}
+
+#workspaces button.urgent {
+    color: @text;
+    border-bottom: 2px solid alpha(@text, 0.70);
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.4; }
+}
+
+#clock {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    background-color: @background;
+    border-radius: 4px;
+    margin: 4px 0;
+    padding: 0 10px;
+}
+
+
+#battery {
+    background-color: @background;
+    border-radius: 4px;
+    margin: 4px 0;
+    padding: 0 10px;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @text;
+}
+
+#battery.warning:not(.charging) {
+    color: alpha(@text, 0.75);
+}
+
+#battery.critical:not(.charging) {
+    color: @text;
+    animation: blink 1s step-end infinite;
+}
+
+#pulseaudio {
+    background-color: @background;
+    border-radius: 4px;
+    margin: 4px 0;
+    padding: 0 10px;
+}
+
+#pulseaudio.muted {
+    color: alpha(@text, 0.40);
+}
+
+#pulseaudio.microphone {
+    padding: 0 10px;
+}
+
+#pulseaudio.microphone.source-muted {
+    color: alpha(@text, 0.40);
+}
+
+#network {
+    margin: 4px 0;
+    padding: 0 4px;
+}
+
+#network.disconnected {
+    color: alpha(@text, 0.40);
+}
+
+tooltip {
+    background-color: alpha(@background, 0.75);
+    color: @text;
+}
+
+tooltip label {
+    color: @text;
+}

@@ -16,3 +16,7 @@ alias mdwm='cd ~/dwm; sudo make clean install; cd -'
 PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
+
+export PATH="$PATH:/home/elias/.local/bin"
+
+source /usr/share/bash-completion/completions/git

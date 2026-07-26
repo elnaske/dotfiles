@@ -1,7 +1,9 @@
+# colors
+config-file = ~/.cache/wal/ghostty.conf
+
 # background
-background-opacity = 0.85
+background-opacity = 0.8
 background-blur = true
-background = #000000
 
 window-decoration = none
 

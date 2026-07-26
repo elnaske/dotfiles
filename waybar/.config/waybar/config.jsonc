@@ -1,0 +1,95 @@
+{
+    "layer": "top", 
+    "position": "bottom", 
+    "height": 30, 
+    "spacing": 4, 
+
+    "modules-left": [
+        "ext/workspaces",
+        "ext/window"
+    ],
+
+    "modules-center": [
+    ],
+
+    "modules-right": [
+	"privacy",
+	"pulseaudio",
+        "network",
+	"battery",
+        "clock"
+    ],
+
+    "ext/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*" : 9
+        },
+	"ignore-hidden": false
+    },
+    "ext/window" : {
+        "max-length": 40,
+        "seperate-outputs": false
+    },
+    "privacy": {
+	"modules": [
+	    {
+		"type": "screenshare"
+	    },
+	    {
+		"type": "audio-in"
+	    },
+	    {
+		"type": "location"
+	    }
+	]
+    },
+    "clock": {
+	"format": "{:%H:%M %d.%m.%Y (%a)}",
+	"format-alt": "{:%H:%M}",
+	"tooltip-format": "{calendar}",
+	"locale": "de_CH.UTF-8",
+	"calendar": {
+	    "format": {
+		"today": "<b><u>{}</u></b>"
+	    }
+	}
+    },
+    "pulseaudio": {
+	"format": "{icon} {volume}% {format_source}",
+	"format-source": " ",
+	"format-source-muted": " ",
+	"format-icons": { 
+	    "default": [" ", " ", " "],
+	    "default-muted": " ",
+	    "headphone": " ",
+	    "headphone-muted": "󰟎 "
+	},
+	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-alt": "{icon}  {time}",
+        "format-plugged": "  {capacity}%",
+        "format-time": "{H}:{m}h",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "󰖩 ",
+        "format-ethernet": "󰈀 ",
+        "format-linked": "󰈀 (No IP)",
+        "format-disconnected": "󰖪 ",
+	"tooltip-format-wifi": "{essid} ({signalStrength}%) 󰖩 ",
+	"tooltip-format-ethernet": "{ifname}  ",
+	"tooltip-format-disconnected": "Disconnected"
+    }
+}
