@@ -1,12 +1,11 @@
 {
     "layer": "top", 
     "position": "bottom", 
-    "height": 30, 
+    "height": 36, 
     "spacing": 4, 
 
     "modules-left": [
-        "ext/workspaces",
-        "ext/window"
+        "ext/workspaces"
     ],
 
     "modules-center": [
@@ -22,17 +21,12 @@
 
     "ext/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}",
         "persistent-workspaces": {
             "*" : 9
         },
 	"ignore-hidden": false
-    },
-    "ext/window" : {
-        "max-length": 40,
-        "seperate-outputs": false
     },
     "privacy": {
 	"modules": [

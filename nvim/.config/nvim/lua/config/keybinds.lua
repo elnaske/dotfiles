@@ -12,8 +12,7 @@ vim.keymap.set("n", "<leader>|", vim.cmd.vs)
 vim.keymap.set("n", "<leader>-", vim.cmd.sp)
 
 -- Pane navigation
+vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
-vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
-

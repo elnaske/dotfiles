@@ -5,7 +5,7 @@ return {
 	"preservim/vimux",
     },
 
-    vim.keymap.set("n", "<leader>t", ":TestNearest<CR>"),
+    vim.keymap.set("n", "<leader>tt", ":TestNearest<CR>"),
     vim.keymap.set("n", "<leader>T", ":TestFile<CR>"),
     vim.keymap.set("n", "<leader>ta", ":TestSuite<CR>"),
 
